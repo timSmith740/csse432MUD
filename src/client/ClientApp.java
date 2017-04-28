@@ -1,6 +1,6 @@
-package Client;
+package client;
 
-import Client.ClientProtocol;
+import client.ClientProtocol;
 
 /*
  * Joseph Militello

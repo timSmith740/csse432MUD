@@ -1,4 +1,4 @@
-package Client;
+package client;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Client.ClientProtocol;
+import client.ClientProtocol;
 
 
 /*
