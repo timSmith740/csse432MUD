@@ -1,4 +1,4 @@
-package client;
+package Client;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import utility.Protocol;
+import Client.ClientProtocol;
 
 
 /*
@@ -72,7 +72,7 @@ public class Client {
 				}
 				
 
-				byte [] result = Protocol.recieve(in);
+				byte [] result = ClientProtocol.recieve(in);
 
 				String resultString= new String(result);
 				System.out.println(resultString);

@@ -1,4 +1,4 @@
-package utility;
+package Client;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,9 +8,9 @@ import java.io.InputStream;
  * Joseph Militello
  * Logan Erexson
  * Tim Smith
- * Static Methods across all files
+ * Static Methods across all client files
  */
-public class Protocol {
+public class ClientProtocol {
 
 
 	public static int DEFAULT_PORT = 5555;
@@ -48,17 +48,17 @@ public class Protocol {
 			String sendback = "attack:"+subparts[1];
 			return(sendback);
 			}
-			return(Protocol.INVALID_SYNTAX);
+			return(ClientProtocol.INVALID_SYNTAX);
 			
 		case "run":
 			if(subparts.length==2){
 			String sendback = "run:"+subparts[1];
 			return(sendback);
 			}
-			return(Protocol.INVALID_SYNTAX);
+			return(ClientProtocol.INVALID_SYNTAX);
 			
 		default:
-			return(Protocol.INVALID_SYNTAX);
+			return(ClientProtocol.INVALID_SYNTAX);
 		}
 		
 	}

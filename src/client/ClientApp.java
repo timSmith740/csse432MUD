@@ -1,6 +1,6 @@
-package client;
+package Client;
 
-import utility.Protocol;
+import Client.ClientProtocol;
 
 /*
  * Joseph Militello
@@ -14,7 +14,7 @@ public class ClientApp {
 
 	public static void main(String[] args) {
 		
-		Client myClient = new Client(Protocol.SERVER_INFO,Protocol.DEFAULT_PORT);
+		Client myClient = new Client(ClientProtocol.SERVER_INFO,ClientProtocol.DEFAULT_PORT);
 		
 		myClient.execute();
 
