@@ -1,5 +1,9 @@
 package client;
 
+import java.awt.event.WindowAdapter;
+
+import com.sun.glass.events.WindowEvent;
+
 import client.ClientProtocol;
 
 /*
@@ -16,8 +20,9 @@ public class ClientApp {
 		
 		Client myClient = new Client(ClientProtocol.SERVER_INFO,ClientProtocol.DEFAULT_PORT);
 		
-		myClient.execute();
-
+	
+		//myClient.execute();
+		myClient.GUI();
 
 	}
 
