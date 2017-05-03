@@ -13,7 +13,7 @@ import java.io.InputStream;
 public class ClientProtocol {
 
 
-	public static int DEFAULT_PORT = 5556;
+	public static int DEFAULT_PORT = 5555;
 	public static String SERVER_INFO = "localhost";
 
 

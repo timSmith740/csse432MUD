@@ -1,11 +1,5 @@
 package client;
 
-import java.awt.event.WindowAdapter;
-
-import com.sun.glass.events.WindowEvent;
-
-import client.ClientProtocol;
-
 /*
  * Joseph Militello
  * Logan Erexson
