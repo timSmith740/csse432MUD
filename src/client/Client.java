@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.Arrays;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -154,10 +155,44 @@ public class Client extends JFrame{
 		  	    String result = execute(console.getText());
 		  	    
 		  	    //Print result in messageArea
-		  	    messageArea.setText(result);
+		  	    if(result.charAt(0)=='&'){
+		  	    	if(result.charAt(1)=='S'){
+		  	    		//Update characters stats
+		  	    		String[] data = result.split("@");
+		  	    		String[] stats = data[0].split(":");
+		  	    		//UpdateStats
+		  	    		messageArea.setText(data[3]);
+		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
+		  	    		AC.setText("AC: "+stats[3]);
+		  	    		armor.setText("Armor: "+stats[4]);
+		  	    		strength.setText("Strength: "+stats[5]);
+		  	    		constitution.setText("Constitution: "+stats[6]);
+		  	    		intelligence.setText("Intelligence: "+stats[7]);
+		  	    		dexterity.setText("Dexterity: "+stats[8]);
+		  	    		
+		  	    		//Update Inventory
+		  	    		inventory.setText(data[1]);
+		  	    		
+		  	    		//Upate Equiped 
+		  	    		equiped.setText(data[2]);
+		  	
+		  	    	}else if(result.charAt(1)=='H'){
+		  	    		String[] data = result.split("@");
+		  	    		String[] stats = data[0].split(":");
+		  	    		messageArea.setText(data[1]);
+		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
+		  	    		
+		  	    	}else{
+		  	    		
+		  	    		messageArea.setText("ERROR");
+		  	    	}
+		  	    }else{
+		  	    	messageArea.setText(result);
+		  	    }
+		  	    
 		  	    
 		  	    //Example to show I can change parameters
-		  	    health.setText("health 10/5");
+		  	   // health.setText("health 10/5");
 		  	  } 
 		  	} );
 		 
@@ -184,11 +219,7 @@ public class Client extends JFrame{
 		    this.setResizable(false); //Make this unable to resize
 		  }
 	  
-//	  public void keyPressed(KeyEvent e){
-//		  if(e.getKeyCode()==KeyEvent.VK_ENTER){
-//			  System.out.println("Hello");
-//		  }
-//	  }
+
 	  
 
 	//Method for adding things to GUI
