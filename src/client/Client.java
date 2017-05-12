@@ -152,7 +152,7 @@ public class Client extends JFrame{
 		  		  
 		  		 //Send message to Server
 		  	    String result = execute(console.getText());
-		  	    
+		  	    console.setText("");
 		  	    //Print result in messageArea
 		  	    if(result.charAt(0)=='&'){
 		  	    	if(result.charAt(1)=='S'){
