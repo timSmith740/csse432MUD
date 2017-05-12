@@ -59,8 +59,7 @@ public class Client extends JFrame{
 
 	  JButton enterButton = new JButton("Enter");// closeButton = new JButton("Close");
 	 
-	  JTextArea messageArea = new JTextArea(
-			    "You are attacked by a stick. You take damage"	);
+	  JTextArea messageArea = new JTextArea();
 	  
 	
 	  JTextArea inventory = new JTextArea( "Stuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nmore Stuff"	);
@@ -161,7 +160,7 @@ public class Client extends JFrame{
 		  	    		String[] data = result.split("@");
 		  	    		String[] stats = data[0].split(":");
 		  	    		//UpdateStats
-		  	    		messageArea.setText(data[3]);
+		  	    		messageArea.append(data[3]);
 		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
 		  	    		AC.setText("AC: "+stats[3]);
 		  	    		armor.setText("Armor: "+stats[4]);
@@ -179,7 +178,7 @@ public class Client extends JFrame{
 		  	    	}else if(result.charAt(1)=='H'){
 		  	    		String[] data = result.split("@");
 		  	    		String[] stats = data[0].split(":");
-		  	    		messageArea.setText(data[1]);
+		  	    		messageArea.append(data[1]);
 		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
 		  	    		
 		  	    	}else{
@@ -187,7 +186,7 @@ public class Client extends JFrame{
 		  	    		messageArea.setText("ERROR");
 		  	    	}
 		  	    }else{
-		  	    	messageArea.setText(result);
+		  	    	messageArea.append(result);
 		  	    }
 		  	    
 		  	    
