@@ -160,7 +160,7 @@ public class Client extends JFrame{
 		  	    		String[] data = result.split("@");
 		  	    		String[] stats = data[0].split(":");
 		  	    		//UpdateStats
-		  	    		messageArea.append(data[3]);
+		  	    		messageArea.append(data[3]+"\n");
 		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
 		  	    		AC.setText("AC: "+stats[3]);
 		  	    		armor.setText("Armor: "+stats[4]);
@@ -186,7 +186,7 @@ public class Client extends JFrame{
 		  	    		messageArea.setText("ERROR");
 		  	    	}
 		  	    }else{
-		  	    	messageArea.append(result);
+		  	    	messageArea.append(result+"\n");
 		  	    }
 		  	    
 		  	    
