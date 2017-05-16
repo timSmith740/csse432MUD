@@ -50,30 +50,24 @@ public class Client extends JFrame{
 	//Create Fields for the GUI
 	  JTextField console = new JTextField(30);
 
-	  JRadioButton small = new JRadioButton("Small"), medium = new JRadioButton("Medium"),
-	      large = new JRadioButton("Large"), thick = new JRadioButton("Thick"),
-	      thin = new JRadioButton("Thin");
-
-	  JCheckBox pepperoni = new JCheckBox("Pepperoni"), mushrooms = new JCheckBox("Mushrooms"),
-	      anchovies = new JCheckBox("Anchovies");
 
 	  JButton enterButton = new JButton("Enter");// closeButton = new JButton("Close");
 	 
 	  JTextArea messageArea = new JTextArea();
 	  
 	
-	  JTextArea inventory = new JTextArea( "Stuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nstuff\nmore Stuff"	);
-	  JTextArea equiped = new JTextArea( "I got a ring!"	);
+	  JTextArea inventory = new JTextArea( ""	);
+	  JTextArea equiped = new JTextArea( ""	);
 	  
-	  JLabel playerName = new JLabel("Player Name: Tim Smith");
-	  JLabel health = new JLabel("Health: 5/5");
-	  JLabel playerLevel = new JLabel("Level: 1");
-	  JLabel strength = new JLabel("Strength: 5");
-	  JLabel dexterity = new JLabel("Dexterity: 5");
-	  JLabel intelligence = new JLabel("Intelligence: 5");
-	  JLabel constitution = new JLabel("Constitution: 5");
-	  JLabel AC = new JLabel("AC: 5");
-	  JLabel armor = new JLabel("Armor: 5");
+	  JLabel playerName = new JLabel("Player Name: ---");
+	  JLabel health = new JLabel("Health: -/-");
+//	  JLabel playerLevel = new JLabel("Level: -");
+	  JLabel strength = new JLabel("Strength: -");
+	  JLabel dexterity = new JLabel("Dexterity: -");
+	  JLabel intelligence = new JLabel("Intelligence: -");
+	  JLabel constitution = new JLabel("Constitution: -");
+//	  JLabel AC = new JLabel("AC: -");
+	  JLabel armor = new JLabel("Armor: -");
 	  
 	  
 	  
@@ -117,13 +111,13 @@ public class Client extends JFrame{
 		    //Name
 		   
 		    addItem(panel1, playerName, 1, 0, 1, 1, GridBagConstraints.CENTER);
-		    addItem(panel1, playerLevel, 1, 1, 1, 1, GridBagConstraints.CENTER);
+		   // addItem(panel1, playerLevel, 1, 1, 1, 1, GridBagConstraints.CENTER);
 		   
 
 		    //Stats
 		    Box sizeBox = Box.createVerticalBox();
 		    sizeBox.add(health);
-		    sizeBox.add(AC);
+//		    sizeBox.add(AC);
 		    sizeBox.add(armor);
 		    sizeBox.add(strength);
 		    sizeBox.add(constitution);
@@ -161,8 +155,9 @@ public class Client extends JFrame{
 		  	    		String[] stats = data[0].split(":");
 		  	    		//UpdateStats
 		  	    		messageArea.append(data[3]+"\n");
-		  	    		health.setText("Health: "+stats[1]+"/"+stats[2]);
-		  	    		AC.setText("AC: "+stats[3]);
+		  	    		playerName.setText("Player Name: "+stats[1]);
+		  	    		health.setText("Health: "+stats[2]+"/"+stats[3]);
+//		  	    		AC.setText("AC: "+stats[4]);
 		  	    		armor.setText("Armor: "+stats[4]);
 		  	    		strength.setText("Strength: "+stats[5]);
 		  	    		constitution.setText("Constitution: "+stats[6]);
