@@ -165,10 +165,10 @@ public class Client extends JFrame{
 		  	    		dexterity.setText("Dexterity: "+stats[8]);
 		  	    		
 		  	    		//Update Inventory
-		  	    		inventory.setText(data[1]);
+		  	    		inventory.append(data[1]);
 		  	    		
-		  	    		//Upate Equiped 
-		  	    		equiped.setText(data[2]);
+		  	    		//Upate Equipped 
+		  	    		equiped.append(data[2]);
 		  	
 		  	    	}else if(result.charAt(1)=='H'){
 		  	    		String[] data = result.split("@");
