@@ -165,9 +165,11 @@ public class Client extends JFrame{
 		  	    		dexterity.setText("Dexterity: "+stats[8]);
 		  	    		
 		  	    		//Update Inventory
+		  	    		inventory.setText("");
 		  	    		inventory.append(data[1]);
 		  	    		
 		  	    		//Upate Equipped 
+		  	    		equiped.setText("");
 		  	    		equiped.append(data[2]);
 		  	
 		  	    	}else if(result.charAt(1)=='H'){
