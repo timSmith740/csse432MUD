@@ -133,7 +133,7 @@ public class Client extends JFrame{
 		    sp.setPreferredSize(new Dimension(200, 100));
 		    addItem(panel1, sp,1,3,1,1,GridBagConstraints.WEST);
 		   
-		    addItem(panel1, new JLabel("Equiped"),2,2,1,1,GridBagConstraints.WEST);
+		    addItem(panel1, new JLabel("Equipped"),2,2,1,1,GridBagConstraints.WEST);
 		    JScrollPane sp1 = new JScrollPane(equiped); 
 		    sp1.setPreferredSize(new Dimension(200,100));
 		    addItem(panel1, sp1,2,3,1,1,GridBagConstraints.WEST);
