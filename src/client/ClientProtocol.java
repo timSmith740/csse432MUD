@@ -14,6 +14,7 @@ public class ClientProtocol {
 
 
 	public static int DEFAULT_PORT = 5555;
+	public static int CHAT_PORT = 5556;
 	public static String SERVER_INFO = "localhost";
 
 
