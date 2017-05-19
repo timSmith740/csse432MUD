@@ -11,8 +11,15 @@ public class ClientApp {
 	
 
 	public static void main(String[] args) {
-		
-		Client myClient = new Client(ClientProtocol.SERVER_INFO,ClientProtocol.DEFAULT_PORT, ClientProtocol.CHAT_PORT);
+		String server = ClientProtocol.SERVER_INFO;
+		int port =ClientProtocol.DEFAULT_PORT;
+		int chatPort=ClientProtocol.CHAT_PORT;
+		if(args.length==3){
+			server = args[0];
+			port= Integer.parseInt(args[1]);
+			chatPort=Integer.parseInt(args[2]);
+		}
+		Client myClient = new Client(server,port, chatPort);
 
 		myClient.GUI();
 
